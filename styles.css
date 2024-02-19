@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+:root{   
+--darkCyan: hsl(185, 75%, 39%);
+--veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+--darkGrayishBlue: hsl(227, 10%, 46%);
+--darkGray: hsl(0, 0%, 59%)
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--darkCyan);
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat; /*Evitar que la imagen se repita*/
+    background-position: right 51vw bottom 20vh, left 45vw top 50vh;
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 18px;
+}
+
+.cards-container{
+    margin: 170px auto 50px;/*Margen Superior a los lados auto inferior 50px */
+    width: 330px;/*Ancho*/
+    height:380px ;/*Altura*/
+    border-radius: 10px; /*Redondear esquinas */
+    overflow: hidden; /*Fuera del contenedor se oculte*/
+    position: relative;/*Permite desplazar una caja respecto de su posición original*/
+}
+.bubbles{
+    background: url(images/bg-pattern-card.svg); /**/
+    height: 140px;/*Alto*/
+}
+
+.photo{
+    position: absolute;/*Se elimina del flujo normal de documentos*/
+    top: 87px;/*Posicion desde la parte superior*/
+    left: 35%;/*Posicion desde la izquieerda  (Aumenta en proporcion)*/
+    border: 5px solid white; /*Borde en la foto*/
+    border-radius: 50%;/*si es 50% se vuelve circular*/
+    overflow: hidden;/*Ocultar la imagen que sobre sale del circulo*/
+    height: 96px; /*Altura*/
+}
+
+.personal-data-container{
+     background-color: white; /*Color del fondo*/
+     height: 150px; /*Altura*/
+     padding: 75px; /*Margen interior*/
+     box-sizing: border-box; /*Que mantenga su tamaño de acuerdo al borde*/
+     text-align: center ;/*Alinear textoo en el centro*/
+    }
+.name{
+    font-weight: 700;/*Gruesor de la letra*/
+    color: var(--veryDarkDesaturatedBlue);
+}
+.age, .city{
+    color: var(--darkGray);
+}
+.city{
+    margin-top: 10px;/*Margen superior*/
+    font-size: 0.8em;/*Tamaño de la letra*/
+}
+
+.stats-container{
+    background-color: white;
+    border-top: 1px solid var(--darkGray);
+    display: flex; 
+    justify-content: space-around; /*Como distribuir el contenido*/
+    align-items: center; /*Alinear items del contenedor*/
+    height: 90px; /*Altura*/
+}
+
+.statitics{
+    text-align: center;/*Centrar contenido*/
+}
+.quantity{
+    font-weight: 700; /*Ancho de la letra*/
+    margin-bottom: 10px;/*Margen inferior*/
+    color: var(--veryDarkDesaturatedBlue);
+}
+.units{
+    font-size: 0.6em; /*Tamaño de la letra*/
+    color: var(--darkGray);
+    letter-spacing: 2px; /*Espacio entre las letras*/
+}
+
+/*----Footer----*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (min-width: 1440px){
+    .cards-container{
+        width: 350px; /*Ancho*/
+    }
+}
